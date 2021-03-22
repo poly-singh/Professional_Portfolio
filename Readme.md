@@ -16,6 +16,7 @@ WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ``` 
 ## Link of deployed application
+https://poly-singh.github.io/Professional_Portfolio/
 
 ### Snapshot of the portfolio
 ![snapshot](./assets/Images/snapshot_full.png) 
