@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 :root {
-    --header-footer-background-color: #404040;
-    --lightskyblue: lightskyblue;
-    --lightgray: lightgray;
-    --about-me-work-border: #333366;
-    --rgba-border-color-opacity: rgba(136, 196, 233, 0.8);
+    --header-footer-background-color: hsl(319, 18%, 21%);
+    --lightpink: rgb(241, 207, 207);
+    --lightgray: rgba(196, 203, 204, 0.925);
+    --about-me-work-border: #151520;
+    --rgba-border-color-opacity: rgba(205, 213, 218, 0.877);
   }
   html {
     scroll-behavior: smooth;
@@ -23,7 +24,7 @@
   header h1 {
     
     padding-left: 50px;
-    color:var(--lightskyblue)
+    color:var(--lightpink)
   }
   header nav ul {
     display: flex; /* Flex container to display the child elements as flex with flex-end, wrap, and align the items in center */
@@ -49,8 +50,8 @@
     padding-right: 10px;
     padding-bottom: 5px;
     text-decoration: none;
-    border-bottom: 2px solid var(--lightskyblue);
-    color: var(--lightskyblue);
+    border-bottom: 2px solid var(--lightpink);
+    color: var(--lightpink);
   }
   body{
     background-color: var(--lightgray); /* Apply background to all of the body of the page */
@@ -62,41 +63,39 @@
   footer {
     /* Apply background to the body of the page */
     background-color: var(--header-footer-background-color); 
-    color: var(--lightskyblue); /* footer title color */
+    color: var(--lightpink); /* footer title color */
   }
 
   footer a {
     text-decoration: none;
-    border-bottom: 2px solid var(--lightskyblue); 
-    color: var(--lightskyblue); /* anchor text color */
+    border-bottom: 2px solid var(--lightpink); 
+    color: var(--lightpink); /* anchor text color */
     font-size: 1.8vw; /* View port font-size to help with responsiveness */
     font-weight: bold;
   }
 
-  .thumbnail:hover {
-    position:relative;
-    top:-25px;
-    left:-35px;
-    width:400px;
-    height:auto;
-    display:block;
-    z-index:999;
-}
+  img.image {
+    border: 1px solid var(--lightpink);
+    float: left;
+    padding: 0 1em 1em 0;
+    width: 200px;
+    height: 200px;
+  }
   
-  .navigation a:hover{ 
-    color: var(--lightskyblue);
+.navigation a:hover{ 
+    color: var(--lightgray);
     font-weight: bold;
-    text-shadow: 0px 0px 20px var(--lightskyblue);
+    text-shadow: 0px 0px 20px var(--lightpink);
   }
 
   .work-grid-container div:hover{ /* Create the ilussion of a brighter image once hovered */
-    mix-blend-mode: color-burn;
+    mix-blend-mode:color-burn;
   }
 
   .footer-container a:hover{
-    color: var(--lightskyblue);
+    color: var(--lightpink);
     font-weight: bold;
-    text-shadow: 0px 0px 20px var(--lightskyblue);
+    text-shadow: 0px 0px 20px var(--lightpink);
   }
 
   .Background_image { /* Here section is a flex container */
@@ -128,35 +127,25 @@
   }
   .about-me-grid-container {
    /* CSS Grid */
-   width: 80%; /* Contain the grid to a maximum of 80% of the flex wrapper */
+   width: 100%; /* Contain the grid to a maximum of 80% of the flex wrapper */
    display: grid;
-   grid-template-columns: 1fr repeat(2, 2fr);  
-    gap: 10px 10px; /* Gap on x and y grid */
+   grid-template-columns: 1fr repeat(2, 2fr);
+   gap: 10px 10px; /* Gap on x and y grid */
+   
+
+
 
 }
 .about-me-item.about-me-title { /* Cell declarations for the title of the container */
   padding-top: 0px;
   font-size: 35px;
-  grid-row: 1 ;
-  grid-column: 1;
-  padding-right: 2px;
+  grid-row: auto ;
+  padding-right: 10px;
   text-align: right;
   border-right: 2px solid var(--about-me-work-border);
 }
 
-.headshot {
-    border: 1px solid var(--lightskyblue);
-    padding: 10px;
-    object-fit:scale-down;
-    max-width: 50%;
-    max-height: 50%;
-    grid-column: 2 / span 3;
-    grid-row:  4/ span 2;
-    text-align:right;
-    min-height: 300px;
-    text-align: justify;
-  }
-  .about-me-item.p1 {
+.about-me-item.p1 {
     padding-left: 10px;
     grid-column: 2 / span 3;
     grid-row: 1 / span 2;
@@ -196,22 +185,22 @@
 
 
 
-  .work-item-code-refractor { /* Grid cells with embedded images */
+  .wordParty { /* Grid cells with embedded images */
     grid-column: 2 / span 2;
     grid-row: 1 / span 5;
-    background-image: url("../Images/digital-marketing-meeting.jpg");
+    background-image: url("../Images/word_party.png");
     background-size: cover; /* Allows the image to autosize  */
     display: flex; /*Flex required to move the element as flex */
-    align-items: flex-end; /*Allow text to be at center of grid*/
+    align-items:flex-end; /*Allow text to be at center of grid*/
     padding-left: 0px;
     padding-bottom: 15px;
-    text-align: left;
+    text-align:left;
     border: .25vw solid var(--rgba-border-color-opacity);
   }
-  .work-item-BR_Engineer {
+  .DayScheduler {
     grid-column: 2 /span 2;
-    grid-row: 6 / span 3;
-    background-image: url("../Images/build-and-release-engineer.png");
+    grid-row: 6 / span 5;
+    background-image: url("../Images/dayscheduler_color.png");
     background-size: cover;
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
@@ -221,10 +210,10 @@
     border: .25vw solid var(--rgba-border-color-opacity);
   }
 
-  .work-item-calculator {
-    grid-column: 4 /span 7;
-    grid-row: 1 / span 4; 
-    background-image: url("../Images/images.jfif");
+  .codequiz {
+    grid-column: 4 /span 22;
+    grid-row: 1 / span 5; 
+    background-image: url("../Images/code-quiz_mainpage.png");
     background-size: cover;
     /* Allow the background image to align */
     display: flex; /*Flex required to move the element as flex */
@@ -236,10 +225,10 @@
   }
 
 
-  .work-item-run-buddy{
-    grid-column: 4 /span 8;
-    grid-row: 5 / span 4;
-    background-image: url("../Images/run-buddy.png");
+  .weatherProject{
+    grid-column: 4 /span 22;
+    grid-row: 6 / span 5;
+    background-image: url("../Images/weatherDashboard.png");
     background-size: cover;
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
@@ -249,9 +238,10 @@
     border: .25vw solid var(--rgba-border-color-opacity);
   }
   .span-background { /* Apply background to any span with this class name */
-    background-color: var(--lightskyblue);
+    background-color: var(--lightpink);
     position: relative;
-    line-height: 1.5;
+    display: flex
+    line-height: 1;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 5%;
@@ -319,27 +309,28 @@ header h1 {
 .cool subtitle {
     padding-right: 30px;
 }
-.span-background.opacity{
-    font-size: 25px;
+.span-background{
+    font-size: 10px;
 }
 .header Background_image{
     background-attachment: scroll;
 }
 .about-me-wrapper {
     margin-top: 20px;
+    
   }
 .about-me-grid-container {
 
    /*CSS grid*/ 
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     /* Gap on x and y grid */
     gap: 5px 5px; 
 }
 .about-me-item.about-me-title {
     padding-top: 0px;
     font-size: 25px;
-    grid-column: 1 / span 3;
+    grid-column: 1 /span 1;
     grid-row: 1 / span 1;
     text-align: center;
     padding-right: 0px;
@@ -348,17 +339,22 @@ header h1 {
     border-bottom: 2px solid var(--about-me-work-border);
 }
 .about-me-item.p1 {
-    padding-top: 5px;
-    grid-column: 1 / span 3;
-    grid-row: 2 / span 2;
+    padding-top: 0px;
+    grid-column: 1 / span 1;
+    grid-row: 2/ span 1;
 }
 .about-me-item.p2 {
-    padding-top: 5px;
+    padding-top: 0px;
     grid-column: 1 / span 3;
     grid-row: 4 / span 2;
     /* Push away the work container from the about me grid containter */
     padding-bottom: 10px;
 }
+
+
+
+
+
 
   /* End of work projects grid smaller screen code changes */
 
@@ -384,7 +380,7 @@ header h1 {
     /* Border right removed*/
     border-right: none;
     /* Border bottom added for new grid format */
-    border-bottom: 2px solid var(--lightskyblue);
+    border-bottom: 2px solid var(--lightpink);
     padding-left: 25px;
   }
 
@@ -445,18 +441,22 @@ header h1 {
     background-attachment: scroll;
   }
     
+  .about-me-wrapper {
+    margin-top: 20px;
+    font-size: 3vw
+  }
   .about-me-grid-container {/*CSS Grid*/
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: .5fr repeat(2, 1fr);
+    grid-template-rows:  repeat(1, 1fr);
     /* Gap on x and y grid */
-    gap: 5px 5px; 
+    gap: 1px 1px; 
   }
 
   
   .about-me-item.about-me-title {
     padding-top: 0px;
     font-size: 25px;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     text-align: center;
     padding-right: 0px;
@@ -465,31 +465,44 @@ header h1 {
     border-bottom: 2px solid var(--about-me-work-border);
     align-self: start;
   }
+  .about-me-item.p1 {
+    padding-top: 0px;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+.about-me-item.p2 {
+    padding-top: 0px;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    /* Push away the work container from the about me grid containter */
+    padding-bottom: 5px;
+}
 
-  .about-me-item.p1 { /* removing  paddings to avoid too much space*/
-    padding-left: 0px;
-  }
-
-  .about-me-item.p2 { /* removing  paddings to avoid too much space*/
-    padding-left: 0px;
-  }
-
-  .work-wrapper {
-    margin-top: 15px;
-  }
+img.image {
+  border: 1px solid var(--lightpink);
+  float: left;
+  padding: 0 1em 1em 0;
+  width: 100px;
+  height: 100px;
+}
+.work-me-wrapper {
+  margin-top: 0px;
+  font-size: 3vw
+}
 
   .work-grid-container{
     grid-template-columns: 1fr repeat(2, 1fr);
     /* .5fr is to fix spacing on main title item */
-    grid-template-rows: .5fr repeat(2, 1fr);
+    grid-template-rows: 0.5fr repeat(2, 1fr);
     /* Gap on x and y grid */
     gap: 2.5px 2.5px;
+    
   }
 
   
   .work-item.work-title {
     font-size: 35px;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     text-align: left;
     padding-top: 0px;
@@ -500,7 +513,7 @@ header h1 {
     align-self: start;
   }
 
-  .work-item.code-refactor {
+  .wordParty {
     grid-column: 1 / span 1;
     grid-row: 2 / span 2;
     align-items: flex-end;
@@ -508,8 +521,8 @@ header h1 {
     background-position: scroll; 
   }
 
-  .work-item.BR_Engineer {
-    grid-column: 2 /span 4;
+  .DayScheduler {
+    grid-column: 1 /span 1;
     grid-row: 3 / span 2;
     align-items: flex-end;
     text-align: center;
@@ -517,22 +530,22 @@ header h1 {
   }
   
 
-  .work-item-work.item-calculator {
-    grid-column: 4 /span 3;
-    grid-row: 1 / span 2;
+  .codequiz {
+    grid-column: 2 /span 1;
+    grid-row: 2 / span 2;
     background-position: scroll;
     text-align: center;
   }
   
-  .work-item.run-buddy {
-    grid-column: span 3;
-    grid-row: 0 / span 2;
+  .weatherProject {
+    grid-column: 2 /span 1;
+    grid-row: 3 / span 2;
     background-position: scroll;
     text-align: center;
   }
 
   .span-background { /* Apply background to any span with this class name */
-    background-color: var(--lightskyblue);
+    background-color: var(--lightpink);
     position: relative;
     line-height: 0.5;
     padding-left: 8px;
