@@ -172,6 +172,7 @@
     grid-template-columns: 1fr repeat(3, 2fr); 
     grid-template-rows: repeat(10, 1fr);
     gap: 10px 10px; /* Gap on x and y grid */
+    
   }
 
   .work-item.work-title {
@@ -232,9 +233,9 @@
     background-size: cover;
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
-    padding-left: 0px;
+    padding-left: 120px;
     padding-bottom: 15px;
-    text-align: left;
+    text-align: center;
     border: .25vw solid var(--rgba-border-color-opacity);
   }
   .span-background { /* Apply background to any span with this class name */
@@ -259,6 +260,7 @@
   }
   .span-background.lower-text {
     font-size: x-small;
+    font-weight: 500;
   }
   .footer-wrapper { /* Flex container */
     display: flex;
@@ -370,14 +372,14 @@ header h1 {
 
   .footer-container { 
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 2.5px 2.5px; /* Gap on x and y grid */
   }
   .footer-grid-item.contact-me {
     padding-top: 0px;
     font-size: 25px;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
     grid-row: 1 / span 1;
     text-align: center;
     padding-right: 0px;
@@ -404,9 +406,18 @@ header h1 {
 
   }
 
-  .footer-grid-item.git-hub{
+  
+  .footer-grid-item.linkedin{
     grid-column: 3 / span 1;
     grid-row: 2 / span 2;
+    align-self: center;
+    width: 20px;
+    padding-left: 80px;
+  }
+
+  .footer-grid-item.github{
+    grid-column: 4 / span 1;
+    grid-row: 2/ span 2;
     align-self: center;
     width: 20px;
     padding-left: 80px;
@@ -425,7 +436,7 @@ header h1 {
   }
 
   footer a {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
 
@@ -448,7 +459,7 @@ header h1 {
     
   .about-me-wrapper {
     margin-top: 20px;
-    font-size: 3vw
+    font-size: 2vw
   }
   .about-me-grid-container {/*CSS Grid*/
     grid-template-columns: repeat(1, 1fr);
@@ -492,22 +503,25 @@ img.image {
 }
 .work-me-wrapper {
   margin-top: 0px;
-  font-size: 3vw
+  font-size: 2vw
+  
 }
 
   .work-grid-container{
-    grid-template-columns: 1fr repeat(2, 1fr);
+    grid-template-columns: 1fr repeat(4, 1fr);
     /* .5fr is to fix spacing on main title item */
-    grid-template-rows: 0.5fr repeat(2, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
     /* Gap on x and y grid */
     gap: 2.5px 2.5px;
+    display:grid;
+    
     
   }
 
   
   .work-item.work-title {
     font-size: 35px;
-    grid-column: 1 / span 1;
+    grid-column:  1 / span 8;
     grid-row: 1 / span 1;
     text-align: left;
     padding-top: 0px;
@@ -516,48 +530,48 @@ img.image {
     border-bottom: 2px solid var(--about-me-work-border);
     border-right: none;
     align-self: start;
+    
   }
 
   .wordParty {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+    grid-row: 2/ span 2;
     align-items: flex-end;
     text-align: center;
-    background-position: scroll; 
+    background-position: scroll;
+    
+     
   }
 
   .DayScheduler {
-    grid-column: 1 /span 1;
-    grid-row: 3 / span 2;
+    grid-column: 1 /span 2;
+    grid-row: 4 / span 2;
     align-items: flex-end;
     text-align: center;
-    background-position: scroll; 
+    background-position: scroll;
+    
   }
   
 
   .codequiz {
-    grid-column: 2 /span 1;
+    grid-column: 3 /span 2;
     grid-row: 2 / span 2;
     background-position: scroll;
     text-align: center;
+   
+    
   }
   
   .weatherProject {
-    grid-column: 2 /span 1;
-    grid-row: 3 / span 2;
+    grid-column: 3 /span 2;
+    grid-row: 4 / span 2;
     background-position: scroll;
     text-align: center;
+    
+    
   }
 
-  .span-background { /* Apply background to any span with this class name */
-    background-color: var(--lightpink);
-    position: relative;
-    line-height: 0.5;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 5%;
-    opacity: .8;
-  }
+  
 
   .span-background.lower-text {
     font-size:xx-small;
@@ -591,24 +605,26 @@ img.image {
   }
 
   footer a {
-    font-size: 3.5vw;
+    font-size: 2vw;
   }
 
   .navigation a:hover{
-      font-size: 4vw; 
+      font-size: vw; 
   }
 
   .footer-container a:hover{
-    font-size: 3.5vw;
+    font-size: 2vw;
   }
 
   /* gap removed from the container  */
   .footer-container {
     gap: 0px 0px;
   }
-
+  .footer-grid-item.linkedin{ 
+    padding-left: 25px;
+  }
   .footer-grid-item.git-hub{ 
-    padding-left: 30px;
+    padding-left: 5px;
   }
 
 
