@@ -162,7 +162,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 25px;
   
   }
   
@@ -239,12 +239,13 @@
     border: .25vw solid var(--rgba-border-color-opacity);
   }
   .span-background { /* Apply background to any span with this class name */
+    
     background-color: var(--lightpink);
     position: relative;
     display: flex
-    line-height: 1;
-    padding-left: 8px;
-    padding-right: 8px;
+    line-height: ;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 5%;
     opacity: .8;
   }
@@ -314,6 +315,7 @@ header h1 {
  padding-left: 0px;
 }
 .cool subtitle {
+  font-size: 1vh;
     padding-right: 30px;
 }
 .span-background{
@@ -390,7 +392,7 @@ header h1 {
   }
   .footer-grid-item.contact-me {
     padding-top: 0px;
-    font-size: 25px;
+    font-size: 20px;
     grid-column: 1 / span 4;
     grid-row: 1 / span 1;
     text-align: center;
@@ -582,7 +584,7 @@ img.image {
     grid-column: 3 /span 2;
     grid-row: 4 / span 2;
     background-position: scroll;
-    text-align: center;
+    text-align: left;
     padding-left: 20px;
     
     
@@ -590,9 +592,9 @@ img.image {
 
   
 
-  .span-background.lower-text {
-    font-size:xx-small;
-  }
+  
+
+  
 
     .footer-wrapper { /* Get the footer closer to the work grid container at the top*/
   margin-top: 10px;
@@ -604,6 +606,24 @@ img.image {
 
   
   /* Start of semantic elents code changes */
+  header {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: var(--header-footer-background-color); 
+  }
+  header h1 {
+    font-size: 5vw;
+    padding-left: 50px;
+    color:var(--lightpink)
+  }
+
+  .span-background.opacity{
+    opacity: .95; 
+    font-size: 20px;
+  }
+  
   header a {
     font-size: 3vw;
   }
@@ -616,6 +636,12 @@ img.image {
   header nav ul li {
     padding: 2px 2px 2px 2px;
   }
+  .Background_image
+  {
+    height: 100px;
+  }
+
+  
 
   p{
     font-size:3vw;
@@ -624,14 +650,70 @@ img.image {
     margin-top: 20px;
     font-size: 2vw
   }
+  
+
+  
+  .work-grid-container{
+    grid-template-columns: 1fr repeat(1, 1fr); 
+    grid-template-rows: 1fr repeat(4, 3fr);
+    /* Gap on x and y grid */
+    gap: 1px 1px;
+    display:grid;
+    width: 100%;
+    height:auto;
+   }
+   .wordParty {
+    grid-column: 1 / span 1;
+    grid-row: 2/ span 2;
+    align-items: flex-end;
+    text-align: center;
+    background-position: scroll;
+    
+     
+  }
+
+  .DayScheduler {
+    grid-column: 1 /span 1;
+    grid-row: 4 / span 2;
+    align-items: flex-end;
+    text-align: center;
+    background-position: scroll;
+    
+  }
+  
+
+  .codequiz {
+    grid-column: 2 /span 2;
+    grid-row: 2 / span 2;
+    background-position: scroll;
+    text-align: center;
+   
+    
+  }
+  
+  .weatherProject {
+    grid-column: 2 /span 2;
+    grid-row: 4 / span 2;
+    background-position: scroll;
+    text-align: left;
+    padding-left: 20px;
+    
+    
+  }
+
   footer a {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .navigation a:hover{
-      font-size: vw; 
+      font-size: 2.5vw; 
   }
-
+  .footer-wrapper { /* Flex container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
   .footer-container a:hover{
     font-size: 2vw;
   }
