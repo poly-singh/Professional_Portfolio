@@ -387,7 +387,7 @@ header h1 {
   .footer-container { 
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 2.5px 2.5px; /* Gap on x and y grid */
   }
   .footer-grid-item.contact-me {
@@ -658,12 +658,12 @@ img.image {
   
   .work-grid-container{
     grid-template-columns: 1fr repeat(1, 1fr); 
-    grid-template-rows: 1fr repeat(4, 3fr);
+    grid-template-rows: 1fr repeat(4, 5fr);
     /* Gap on x and y grid */
     gap: 1px 1px;
     display:grid;
     width: 100%;
-    height:auto;
+   
    }
    .wordParty {
     grid-column: 1 / span 1;
@@ -677,7 +677,7 @@ img.image {
 
   .DayScheduler {
     grid-column: 1 /span 1;
-    grid-row: 4 / span 2;
+    grid-row: 4 / span 5;
     align-items: flex-end;
     text-align: center;
     background-position: scroll;
@@ -715,7 +715,7 @@ img.image {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .footer-container a:hover{
     font-size: 2vw;
@@ -726,10 +726,10 @@ img.image {
     gap: 0px 0px;
   }
   .footer-grid-item.linkedin{ 
-    padding-left: 25px;
+    padding-left: 20px;
   }
   .footer-grid-item.git-hub{ 
-    padding-left: 5px;
+    padding-left: 10px;
   }
 
 
