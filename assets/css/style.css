@@ -99,13 +99,13 @@
   }
 
   .Background_image { /* Here section is a flex container */
-    height: 300px;
+    height: 200px;
     background-image: url("../Images/background_1.jfif");
     border-bottom-left-radius: 30px 30px; 
     border-bottom-right-radius: 30px 30px;
     background-size: cover; 
     background-position:  100% 13%; 
-    background-attachment: fixed; /* Image scrolls with the page */
+    background-attachment: scroll; /* Image scrolls with the page */
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -122,30 +122,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    justify-content: center;
+    justify-content: auto;
     margin-top: 50px;
   }
   .about-me-grid-container {
    /* CSS Grid */
-   width: 100%; /* Contain the grid to a maximum of 80% of the flex wrapper */
+   width: 80%; /* Contain the grid to a maximum of 80% of the flex wrapper */
    display: grid;
    grid-template-columns: 1fr repeat(2, 2fr);
    gap: 10px 10px; /* Gap on x and y grid */
-   
-
-
-
-}
-.about-me-item.about-me-title { /* Cell declarations for the title of the container */
-  padding-top: 0px;
-  font-size: 35px;
-  grid-row: auto ;
-  padding-right: 10px;
-  text-align: right;
-  border-right: 2px solid var(--about-me-work-border);
-}
-
-.about-me-item.p1 {
+  }
+  .about-me-item.about-me-title { /* Cell declarations for the title of the container */
+    padding-top: 0px;
+    font-size: 35px;
+    padding-right: 2px;
+    text-align: right;
+    border-right: 2px solid var(--about-me-work-border);
+  }
+  .about-me-item.p1 {
     padding-left: 10px;
     grid-column: 2 / span 3;
     grid-row: 1 / span 2;
@@ -153,7 +147,6 @@
   .about-me-item.p2 {
     padding-left: 10px;
     padding-top: 20px;
-    
     grid-row: 2 / span 1;
     grid-column: 2 / span 3;
   }
@@ -161,35 +154,34 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    justify-content: center;
+    justify-content: auto;
     margin-top: 25px;
-  
   }
   
   .work-grid-container {/* CSS Grid */
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr repeat(3, 2fr); 
-    grid-template-rows: repeat(10, 2fr);
+    grid-template-columns: 4fr repeat(4, 3fr); 
+    grid-template-rows: repeat(10, 6fr);
     gap: 10px 10px; /* Gap on x and y grid */
-    
   }
+
+  /* grid-template-columns: 1fr repeat(1, 2fr); 
+    grid-template-rows: repeat(10, 1fr); */
 
   .work-item.work-title {
     padding-top: 10px;
     font-size: 35px;
     grid-row: auto;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 2px;
     border-right: 2px solid var(--about-me-work-border);
-}
+  }
 
-
-
-  .wordParty { /* Grid cells with embedded images */
-    grid-column: 2 / span 2;
+  .TechEstore { /* Grid cells with embedded images */
+    grid-column: 2 / span 3;
     grid-row: 1 / span 5;
-    background-image: url("../Images/word_party.png");
+    background-image: url("../Images/TechEstore.png");
     background-size: cover; /* Allows the image to autosize  */
     display: flex; /*Flex required to move the element as flex */
     align-items:flex-end; /*Allow text to be at center of grid*/
@@ -198,10 +190,10 @@
     text-align:left;
     border: .25vw solid var(--rgba-border-color-opacity);
   }
-  .DayScheduler {
-    grid-column: 2 /span 2;
-    grid-row: 6 / span 5;
-    background-image: url("../Images/dayscheduler_color.png");
+  .wordParty{
+    grid-column: 5 / span 21;
+    grid-row: 1 / span 5;
+    background-image: url("../Images/word_party.png");
     background-size: cover;
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
@@ -212,11 +204,10 @@
   }
 
   .codequiz {
-    grid-column: 4 /span 22;
-    grid-row: 1 / span 5; 
+    grid-column: 2 /span 3;
+    grid-row: 6 / span 5;
     background-image: url("../Images/code-quiz_mainpage.png");
-    background-size: cover;
-    /* Allow the background image to align */
+    background-size: cover; /* Allow the background image to align */
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
     padding-left: 0px;
@@ -227,23 +218,22 @@
 
 
   .weatherProject{
-    grid-column: 4 /span 22;
+    grid-column: 5 / span 21;
     grid-row: 6 / span 5;
     background-image: url("../Images/weatherDashboard.png");
     background-size: cover;
     display: flex; /*Flex required to move the element as flex */
     align-items: flex-end; /*Allow text to be at center of grid*/
-    padding-left: 120px;
+    padding-left: 0px;
     padding-bottom: 15px;
-    text-align: center;
+    text-align: left;
     border: .25vw solid var(--rgba-border-color-opacity);
   }
   .span-background { /* Apply background to any span with this class name */
     
     background-color: var(--lightpink);
     position: relative;
-    display: flex
-    line-height: ;
+    display: flex;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5%;
@@ -259,11 +249,9 @@
     opacity: .95; 
     font-size: 30px;
   }
-  .span-background.lower-text {
-    font-size: x-small;
-    font-weight: 500;
-  }
-  .footer-wrapper { /* Flex container */
+
+  
+.footer-wrapper { /* Flex container */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -273,7 +261,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: 1fr repeat(4, 2fr); 
-    grid-template-rows: repeat(4,2fr); 
+    grid-template-rows: repeat(4,1fr); 
     gap: 20px 20px; 
   }
   /*footer grid*/
@@ -283,11 +271,11 @@
 
   .footer-grid-item.contact-me {
     padding-top: 10px;
-    font-size: 35px;
-    grid-row: 1 / span 3;
+    font-size: 30px;
+    grid-row: 1 / span 2;
     text-align: right;
     padding-right: 10px;
-    border-right: 2px solid var(--lightskyblue);
+    border-right: 2px solid var(--lightpink);
   }
   .footer-grid-item.phone{
     
@@ -307,36 +295,35 @@
   @media screen and (max-width: 980px) {
 
     /* footer grid smaller screen changes  */
- header {
+    header {
       justify-content: center;
- }
-header h1 {
+    }
+    header h1 {
         /* At smaller screens remove space at left of h1 on header */
- padding-left: 0px;
-}
-.cool subtitle {
-  font-size: 1vh;
-    padding-right: 30px;
-}
-.span-background{
-    font-size: 10px;
-}
-.header Background_image{
-    background-attachment: scroll;
-}
-.about-me-wrapper {
-    margin-top: 20px;
-    
-  }
-.about-me-grid-container {
+        padding-left: 0px;
+      }
+    .cool subtitle {
+      font-size: 1vh;
+      padding-right: 30px;
+    }
+    .span-background{
+      font-size: 10px;
+    }
+    .header Background_image{
+      background-attachment: scroll;
+    }
+    .about-me-wrapper {
+      margin-top: 20px;
+    }
+    .about-me-grid-container {
+      /*CSS grid*/ 
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      /* Gap on x and y grid */
+      gap: 5px 5px; 
 
-   /*CSS grid*/ 
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    /* Gap on x and y grid */
-    gap: 5px 5px; 
-}
-.about-me-item.about-me-title {
+    }
+  .about-me-item.about-me-title {
     padding-top: 0px;
     font-size: 25px;
     grid-column: 1 /span 1;
@@ -346,64 +333,110 @@ header h1 {
     padding-bottom: 0px;
     border-right: none;
     border-bottom: 2px solid var(--about-me-work-border);
-}
+  }
 .about-me-item.p1 {
     padding-top: 0px;
     grid-column: 1 / span 1;
     grid-row: 2/ span 1;
-}
+  }
 .about-me-item.p2 {
-    padding-top: 0px;
-    grid-column: 1 / span 3;
-    grid-row: 4 / span 2;
-    /* Push away the work container from the about me grid containter */
-    padding-bottom: 10px;
-}
+  padding-top: 0px;
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 2;
+  /* Push away the work container from the about me grid containter */
+  padding-bottom: 10px;
+  }
+
+  .work-item.work-title {
+    padding-top: 10px;
+    font-size: 35px;
+    grid-row: 1 / span 1;
+    text-align: right;
+    padding-right: 2px;
+    border-right: 2px solid var(--about-me-work-border);
+  }
+
+  .work-grid-container {/* CSS Grid */
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr); 
+    grid-template-rows: repeat(10, 1fr);
+    gap: 10px 10px; /* Gap on x and y grid */
+  }
 
   
 
   
-  
+
+  .TechEstore {
+    grid-column: 2 / span 2;
+    padding-left: 10px;
+    grid-row: 1/ span 5;
+    align-items: flex-end;
+    text-align: center;
+    background-position: scroll;
     
+     
+  }
+
+  .wordParty {
+    grid-column: 4 /span 15;
+    grid-row: 1 / span 5;
+    align-items: flex-end;
+    text-align: center;
+    background-position: scroll;
+    
+  }
   
 
+  .codequiz {
+    grid-column: 2 /span 2;
+    grid-row: 6 / span 4;
+    background-position: scroll;
+    text-align: center;
+   
+    
+  }
   
+  .weatherProject {
+    grid-column: 4 /span 15;
+    grid-row: 6 / span 4;
+    background-position: scroll;
+    text-align: center;
+    padding-left: 20px;
     
     
+  }
 
 
+  
 
-
-
-
-
-  /* End of work projects grid smaller screen code changes */
+/* End of work projects grid smaller screen code changes */
 
   /* Start of footer grid smaller screen code changes */
-  .footer-wrapper {
-    margin-top: 20px;
-  }
-
-  .footer-container { 
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 2.5px 2.5px; /* Gap on x and y grid */
-  }
-  .footer-grid-item.contact-me {
-    padding-top: 0px;
-    font-size: 20px;
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
-    text-align: center;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    /* Border right removed*/
-    border-right: none;
-    /* Border bottom added for new grid format */
-    border-bottom: 2px solid var(--lightpink);
-    padding-left: 25px;
-  }
+.footer-wrapper {
+  margin-top: 20px;
+}
+.footer-container { 
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2.5px 2.5px; /* Gap on x and y grid */
+}
+.footer-grid-item.contact-me {
+  padding-top: 0px;
+  font-size: 20px;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
+  text-align: center;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  /* Border right removed*/
+  border-right: none;
+  /* Border bottom added for new grid format */
+  border-bottom: 2px solid var(--lightpink);
+  padding-left: 25px;
+}
 
   .footer-grid-item.phone{
     grid-column: 1 / span 1;
@@ -532,30 +565,25 @@ img.image {
   /* Gap on x and y grid */
     /* Gap on x and y grid */
     gap: 2px 2px;
-    width: 100%;
+    width: 80%;
     display:grid;
-    
-    
-}
+  }
 
-  
+
   .work-item.work-title {
     font-size: 25px;
     grid-column:  1 / span 10;
     grid-row: 1 / span 1;
     text-align: center;
     padding-top: 0px;
-    
     padding-right: 0px;
     padding-bottom: 0px;
     border-bottom: 2px solid var(--about-me-work-border);
     border-right: none;
-   
-    
   }
 
-  .wordParty {
-    grid-column: 1 / span 3;
+  .TechEstore {
+    grid-column: 2 / span 2;
     grid-row: 2/ span 2;
     align-items: flex-end;
     text-align: center;
@@ -564,9 +592,9 @@ img.image {
      
   }
 
-  .DayScheduler {
-    grid-column: 1 /span 3;
-    grid-row: 4 / span 2;
+  .wordParty {
+    grid-column: 4 /span 15;
+    grid-row: 2 / span 2;
     align-items: flex-end;
     text-align: center;
     background-position: scroll;
@@ -575,8 +603,8 @@ img.image {
   
 
   .codequiz {
-    grid-column: 4 /span 3;
-    grid-row: 2 / span 2;
+    grid-column: 2 /span 2;
+    grid-row: 4 / span 4;
     background-position: scroll;
     text-align: center;
    
@@ -584,22 +612,14 @@ img.image {
   }
   
   .weatherProject {
-    grid-column: 4 /span 3;
-    grid-row: 4 / span 2;
+    grid-column: 4 /span 15;
+    grid-row: 4 / span 4;
     background-position: scroll;
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
-    
-    
   }
 
-  
-
-  
-
-  
-
-    .footer-wrapper { /* Get the footer closer to the work grid container at the top*/
+.footer-wrapper { /* Get the footer closer to the work grid container at the top*/
   margin-top: 10px;
   }
 
@@ -655,17 +675,26 @@ img.image {
   }
   
 
+  .work-grid-container{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 1px 1px; 
+    flex-direction: column;
+   }
+
   
   .work-grid-container{
     grid-template-columns: 1fr repeat(1, 1fr); 
-    grid-template-rows: 1fr repeat(4, 5fr);
+    grid-template-rows: 1fr repeat(4, 4fr);
     /* Gap on x and y grid */
-    gap: 1px 1px;
+     gap: 1px 1px; 
     display:grid;
-    width: 100%;
+    width: 80%;
    
-   }
-   .wordParty {
+   } 
+
+   
+  .TechEstore {
     grid-column: 1 / span 1;
     grid-row: 2/ span 2;
     align-items: flex-end;
@@ -674,18 +703,16 @@ img.image {
     
      
   }
-
-  .DayScheduler {
+   .wordParty {
     grid-column: 1 /span 1;
     grid-row: 4 / span 5;
     align-items: flex-end;
     text-align: center;
     background-position: scroll;
-    
-  }
-  
+  } 
 
-  .codequiz {
+ 
+.codequiz {
     grid-column: 2 /span 2;
     grid-row: 2 / span 2;
     background-position: scroll;
@@ -700,10 +727,8 @@ img.image {
     background-position: scroll;
     text-align: left;
     padding-left: 20px;
-    
-    
   }
-
+    
   footer a {
     font-size: 2.5vw;
   }
